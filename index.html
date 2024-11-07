@@ -12,21 +12,29 @@
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<style>
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+			#manipulator {
+    transition: transform 0.5s ease;
 }
 
-/* Pastikan ikon media sosial tetap di atas gambar */
-.swiper-slide .relative .absolute {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    z-index: 10; /* Pastikan berada di atas gambar */
-}
+			#manipulator:hover {
+				transform: scale(1.1);
+			}
+
+			.swiper-slide {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			/* Pastikan ikon media sosial tetap di atas gambar */
+			.swiper-slide .relative .absolute {
+				position: absolute;
+				top: 0.5rem;
+				right: 0.5rem;
+				z-index: 10; /* Pastikan berada di atas gambar */
+			}
 	</style>
+	<script src="https://kit.fontawesome.com/386b31f430.js" crossorigin="anonymous"></script>
 	</head>
 	<body class="bg-gray-100 font-['Poppins']">
 		<nav
@@ -385,7 +393,7 @@
 				<div class="swiper-slide">
 					<div class="relative ">
 						<!-- Gambar Utama -->
-						<img class="w-[340px] h-[450px] object-cover rounded-2xl" src="http://img-host-by-dev.vercel.app/img/ayangKu/384354675_694124538920769_4677035868985747627_n.webp.jpg" alt="">
+						<img id="manipulator" class="w-[340px] h-[450px] object-cover rounded-2xl" src="http://img-host-by-dev.vercel.app/img/ayangKu/384354675_694124538920769_4677035868985747627_n.webp.jpg" alt="">
 						
 						<!-- Ikon Media Sosial -->
 						<div class="absolute top-2 right-2 flex space-x-2">
@@ -411,7 +419,7 @@
 				<div class="swiper-slide">
 					<div class="relative ">
 						<!-- Gambar Utama -->
-						<img class="w-[340px] h-[450px] object-cover rounded-2xl" src="http://img-host-by-dev.vercel.app/img/ayangKu/424779076_18410917870031145_1312900201490461777_n.jpg" alt="">
+						<img id="manipulator" class="w-[340px] h-[450px] object-cover rounded-2xl" src="http://img-host-by-dev.vercel.app/img/ayangKu/424779076_18410917870031145_1312900201490461777_n.jpg" alt="">
 						
 						<!-- Ikon Media Sosial -->
 						<div class="absolute top-2 right-2 flex space-x-2">
@@ -436,7 +444,7 @@
 				<div class="swiper-slide">
 					<div class="relative ">
 						<!-- Gambar Utama -->
-						<img class="w-[340px] h-[450px] object-cover rounded-2xl" src="http://img-host-by-dev.vercel.app/img/ayangKu/424976624_18410917888031145_4958954260837261065_n.jpg" alt="">
+						<img id="manipulator" class="w-[340px] h-[450px] object-cover rounded-2xl" src="http://img-host-by-dev.vercel.app/img/ayangKu/424976624_18410917888031145_4958954260837261065_n.jpg" alt="">
 						
 						<!-- Ikon Media Sosial -->
 						<div class="absolute top-2 right-2 flex space-x-2">
@@ -461,7 +469,7 @@
 				<div class="swiper-slide">
 					<div class="relative ">
 						<!-- Gambar Utama -->
-						<img class="w-[340px] h-[450px] object-cover rounded-2xl" src="http://img-host-by-dev.vercel.app/img/ayangKu/320174219_893825511613537_7328282769003192993_n.jpg" alt="">
+						<img id="manipulator" class="w-[340px] h-[450px] object-cover rounded-2xl" src="http://img-host-by-dev.vercel.app/img/ayangKu/320174219_893825511613537_7328282769003192993_n.jpg" alt="">
 						
 						<!-- Ikon Media Sosial -->
 						<div class="absolute top-2 right-2 flex space-x-2">
@@ -566,16 +574,53 @@
 			</div>
 		</section>
 			<section class="w-full bg-white">
-				<div class="mx-40 py-20 grid grid-cols-4 gap-10">
-					<div>1</div>
-					<div>2</div>
-					<div>3</div>
-					<div>4</div>
-				</div>
+				<div class="md:max-w-3xl lg:max-w-[1200px] mx-auto ">
+					<div class="py-20 grid grid-cols-4 gap-10">
+						<div class=" flex flex-col gap-2">
+							<div>
+								<img src="http://img-host-by-dev.vercel.app/img/ayangKu/308119509_2292158377617166_8184178182546747437_n.jpg" alt="Location" class="w-16 h-16 rounded-sm">
+								<span>
+									Syntax Spark 
+								</span>
+							</div>
+							<div>
+								<i class="fa-solid fa-envelope"></i> spark@gmail.com
+							</div>
+							<div>
+								<i class="fa-solid fa-phone"></i> +62 812 3456 7890
+							</div>
+						</div>
+						<div  class=" flex flex-col gap-2">
+							<p class=" font-semibold  text-xl">Home</p>
+							<p>Features</p>
+							<p>Testimonial</p>
+							<p>FAQ</p>
+						</div>
+						<div  class=" flex flex-col gap-2">
+							<p class=" font-semibold  text-xl">About Us</p>
+							<p>Company</p>
+							<p>Team</p>
+						</div>
+						<div  class=" flex flex-col gap-2">
+							<p class=" font-semibold text-xl">Social Media</p>
+							<div class=" flex gap-2">
+								<a href="https://facebook.com" target="_blank" class="bg-gray-200 py-1 px-2 rounded-md">
+									<i class="fa-brands fa-facebook"></i>
+								</a>
+								<a href="https://instagram.com" target="_blank" class="bg-gray-200 py-1 px-2 rounded-md">
+									<i class="fa-brands fa-instagram"></i>
+								</a>
+								<a href="https://linkedin.com" target="_blank" class="bg-gray-200 py-1 px-2 rounded-md">
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+							</div>
+						</div>
+					</div>
 
-				<div class="flex justify-center items-center gap-5">
-					&copy; 2024 Syntax Sprark. All Right Reserved
-				</div>
+					<div class="flex justify-center items-center gap-5">
+						&copy; 2024 Syntax Sprark. All Right Reserved
+					</div>
+			</div>
 			</section>
 
 
